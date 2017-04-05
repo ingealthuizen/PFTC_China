@@ -9,6 +9,13 @@ library(mgcv)
 #PFTC_CO2_2016<- read.table("PFTC_CO2flux_all_2016.txt", header = TRUE, sep = "\t", dec = ",") 
 PFTC_CO2_2016<- read.table("Data\\CO2\\PFTC_CO2flux_all_new.txt", header = TRUE, sep = "\t", dec = ".") 
 str(PFTC_CO2_2016)
+PFTC_CO2_2016$treatment<- as.character(PFTC_CO2_2016$treatment)
+
+#rename treatment to be more selfexplanatory
+PFTC_CO2_2016$treatment[PFTC_CO2_2016$treatment== "tt1"] <- "warm1"
+PFTC_CO2_2016$treatment[PFTC_CO2_2016$treatment== "tt3"] <- "warm3"
+PFTC_CO2_2016$treatment[PFTC_CO2_2016$treatment== "tt2"] <- "cool1"
+PFTC_CO2_2016$treatment[PFTC_CO2_2016$treatment== "tt4"] <- "cool3"
 
 # set all numeric parameters to 2 decimals 
 is.num <- sapply(PFTC_CO2_2016, is.numeric)
