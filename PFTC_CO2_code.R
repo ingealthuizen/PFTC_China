@@ -7,7 +7,7 @@ library(smatr)
 library(mgcv)
 
 #PFTC_CO2_2016<- read.table("PFTC_CO2flux_all_2016.txt", header = TRUE, sep = "\t", dec = ",") 
-PFTC_CO2_2016<- read.table("O:\\PFTC_China\\PFTC_DATA\\CO2_flux\\PFTC_CO2flux_all_new.txt", header = TRUE, sep = "\t", dec = ".") 
+PFTC_CO2_2016<- read.table("Data\\CO2\\PFTC_CO2flux_all_new.txt", header = TRUE, sep = "\t", dec = ".") 
 str(PFTC_CO2_2016)
 
 # set all numeric parameters to 2 decimals 
