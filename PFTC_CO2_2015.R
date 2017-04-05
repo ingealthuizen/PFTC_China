@@ -4,7 +4,7 @@ library(tidyr)
 library(raster)
 
 #PFTC_CO2_2016<- read.table("PFTC_CO2flux_all_2016.txt", header = TRUE, sep = "\t", dec = ",") 
-PFTC_CO2_2015<- read.table("O:\\PFTC_China\\PFTC_DATA\\CO2_flux\\PFTC_CO2flux_2015.txt", header = TRUE, sep = "\t", dec = ".") 
+PFTC_CO2_2015<- read.table("Data\\CO2\\PFTC_CO2flux_2015.txt", header = TRUE, sep = "\t", dec = ".") 
 str(PFTC_CO2_2015)
 
 #remove unimportant columns
