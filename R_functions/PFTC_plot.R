@@ -14,7 +14,7 @@ ggplot(PFTC_CO2_2015, aes(treatment, NEE_lm, col=treatment))+
   facet_grid(. ~ origin)
 
 # difference between two chambers?
-ggplot(PFTC_Reco_final, aes(group, NEE_lm, col=treatment))+
+ggplot(PFTC_Reco_final, aes(group, Reco_lm, col=treatment))+
   geom_boxplot()+
   facet_grid(. ~ site)
 
@@ -24,7 +24,7 @@ ggplot(PFTC_Reco_final, aes(group, NEE_lm, col=treatment))+
 #change order of the treatments
 PFTC_Reco_final$treatment<-factor(PFTC_Reco_final$treatment, levels = c("c", "tt0", "otc", "tt1", "tt2", "tt3", "tt4"))
 
-ggplot(PFTC_CO2_1516, aes(site, Reco_lm))+
+ggplot(Reco_1516, aes(site, Reco_lm))+
   geom_boxplot()+
   facet_grid(. ~ year)+
   theme_bw()+
@@ -47,7 +47,6 @@ ggplot(PFTC_Reco_final, aes(origin, Reco_lm))+
   theme_bw()+
   ylab("Reco (μmol CO2m–2 s–1)")+
   scale_x_discrete("Treatment")
-
 
 PFTC_GPP_2016_PAR<- PFTC_GPP_2016 %>%
   filter(PAR.x > 600)
