@@ -5,15 +5,7 @@ library(raster)
 
 #PFTC_CO2_2016<- read.table("PFTC_CO2flux_all_2016.txt", header = TRUE, sep = "\t", dec = ",") 
 PFTC_CO2_2015<- read.table("Data\\CO2\\PFTC_CO2flux_2015.txt", header = TRUE, sep = "\t", dec = ".") 
-str(PFTC_CO2_2015)
 PFTC_CO2_2015$treatment<- as.character(PFTC_CO2_2015$treatment)
-
-#rename treatment to be more selfexplanatory
-PFTC_CO2_2015$treatment[PFTC_CO2_2015$treatment== "tt1"] <- "warm1"
-PFTC_CO2_2015$treatment[PFTC_CO2_2015$treatment== "tt3"] <- "warm3"
-PFTC_CO2_2015$treatment[PFTC_CO2_2015$treatment== "tt2"] <- "cool1"
-PFTC_CO2_2015$treatment[PFTC_CO2_2015$treatment== "tt4"] <- "cool3"
-
 
 #remove unimportant columns
 PFTC_CO2_2015[13:17]<- NULL
